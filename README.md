@@ -23,5 +23,5 @@ This is a console-based clone of the classic mobile game Flappy Bird, built usin
 ### Display💻
 
 - When the program initiates, it displays the title of the game along with 3 options --> start, instructions and quit.
-- ![title screen image](https://github.com/user-attachments/assets/4423b243-dc7e-4769-8e19-69331a6bd941)
+ ![title screen image](https://github.com/user-attachments/assets/4423b243-dc7e-4769-8e19-69331a6bd941)
 - The whole screen is divided into two sections, one is the console(play) screen, the other is the menu screen (where the score
