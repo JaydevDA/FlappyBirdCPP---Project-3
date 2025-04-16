@@ -18,4 +18,4 @@ This is a console-based clone of the classic mobile game Flappy Bird, built usin
 - Control a bird (represented with ASCII characters).
 - Avoid crashing into pipes.
 - Earn points by successfully passing through pipe gaps.
-- Game ends if the bird hits a pipe or the ground/ceiling.
+- Game ends if the bird hits a pipe or the ground.
