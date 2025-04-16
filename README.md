@@ -9,7 +9,7 @@
 6. [Limitations](#limitations)
 7. [Potential Improvements](#potential-improvements)
 
-## Game Overview
+## *Game Overview*
 
 This is a console-based clone of the classic mobile game Flappy Bird, built using C++ and Windows console functions. It simulates the original game’s basic mechanics: a bird flying through gaps between pipes, with increasing difficulty and score tracking.
 
@@ -17,5 +17,7 @@ This is a console-based clone of the classic mobile game Flappy Bird, built usin
 
 - Control a bird (represented with ASCII characters).
 - Avoid crashing into pipes.
-- Earn points by successfully passing through pipe gaps.
+- Earn points(+1) by successfully passing through pipe gaps.
 - Game ends if the bird hits a pipe or the ground.
+
+### 💻![PcGIF](https://github.com/user-attachments/assets/41e0ef35-b565-4ee4-a39f-3bff59d61e98)
