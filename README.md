@@ -10,26 +10,14 @@
 7. [Potential Improvements](#potential-improvements)
 
 ## Game Overview
-A console-based implementation of Flappy Bird using:
-- Windows API for console manipulation
-- ASCII art for graphics
-- Simple collision detection
-- Score tracking system
 
-## Code Structure
+This is a console-based clone of the classic mobile game Flappy Bird, built using C++ and Windows console functions. It simulates the original game’s basic mechanics: a bird flying through gaps between pipes, with increasing difficulty and score tracking.
 
-### Global Variables
-```
-HANDLE console = GetStdHandle(STD_OUTPUT_HANDLE);
-COORD CursorPosition;
+🎯 Objective  
+Control a bird (represented with ASCII characters).
 
-int pipePos[3];       // Horizontal positions of pipes
-int gapPos[3];        // Vertical positions of pipe gaps
-int pipeFlag[3];      // Active status of pipes
-char bird[2][6] = {   // ASCII art for the bird
-    {'/','-','-','o','\\',' '},
-    {'|','_','_','_',' ','>'}
-};
-int birdPos = 6;      // Vertical position of bird
-int score = 0;        // Player score
-```
+Avoid crashing into pipes.
+
+Earn points by successfully passing through pipe gaps.
+
+Game ends if the bird hits a pipe or the ground/ceiling.
