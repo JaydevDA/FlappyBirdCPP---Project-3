@@ -88,7 +88,7 @@ int score = 0;
   - _void instructions() [Not necessary]_
   - _void play()_
 
-- apply all the functions in int main().
+- apply play(), instructions() and SetCursor functions in int main().
 
 ## Applications of the Functions 📃
 
