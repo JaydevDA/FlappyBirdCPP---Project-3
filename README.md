@@ -42,9 +42,46 @@ This is a console-based clone of the classic mobile game Flappy Bird, built usin
 ## *Code Structure* 👷🏻
 
 - Include libraries ( also non- standard libraries like dos.h, windows.h and conio.h ).
+
+'''
+#include<iostream>
+#include<conio.h>
+#include<dos.h>
+#include<stdlib.h>
+#include<string.h>
+#include <windows.h>
+#include <time.h>
+'''
+
 - Define or declare Global Variables.
+
+'''
+#define SCREEN_WIDTH 90
+#define SCREEN_HEIGHT 26
+#define WIN_WIDTH 70
+#define MENU_WIDTH 20
+#define GAP_SIZE 7
+#define PIPE_DIF 45
+
+using namespace std;
+//	cout<<"���������";
+ 
+HANDLE console = GetStdHandle(STD_OUTPUT_HANDLE);
+COORD CursorPosition;
+
+int pipePos[3];
+int gapPos[3];
+int pipeFlag[3];
+char bird[2][6] = { '/','-','-','o','\\',' ',
+					'|','_','_','_',' ','>' };
+int birdPos = 6;
+int score = 0;
+'''
+
 - Create functions.
 - apply all the functions in int main().
+
+
 
 
 
