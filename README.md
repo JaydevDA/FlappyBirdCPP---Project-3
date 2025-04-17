@@ -93,7 +93,26 @@ int score = 0;
 
 - apply all the functions in int main().
 
+## Applications of the Functions 📃
 
+- void gotoxy(int x, int y)
+
+```
+void gotoxy(int x, int y)
+{
+	CursorPosition.X = x;
+	CursorPosition.Y = y;
+	SetConsoleCursorPosition(console, CursorPosition);
+}
+```
+
+- Purpose:
+   - Moves the console cursor to a specified (x, y) coordinate.
+
+- How It Works:
+  - Uses COORD CursorPosition and SetConsoleCursorPosition() to set the cursor position.
+
+- Allows precise placement of text (like the bird or pipes) on the screen.
 
 
 
