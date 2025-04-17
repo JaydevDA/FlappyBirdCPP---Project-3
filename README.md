@@ -78,24 +78,24 @@ int score = 0;
 ```
 
 - Create functions.
-  - void gotoxy(int x, int y)
-  - void setcursor(bool visible, DWORD size)
-  - void drawBorder()
-  - void genPipe(int ind)
-  - void erasePipe(int ind)
-  - void drawBird()
-  - void eraseBird()
-  - int collision()
-  - void debug() [Not necesssary]
-  - void updateScore()
-  - void instructions() [Not necessary]
-  - void play()
+  - _void gotoxy(int x, int y)_
+  - _void setcursor(bool visible, DWORD size)_
+  - _void drawBorder()_
+  - _void genPipe(int ind)_
+  - _void erasePipe(int ind)_
+  - _void drawBird()_
+  - _void eraseBird()_
+  - _int collision()_
+  - _void debug() [Not necesssary]_
+  - _void updateScore()_
+  - _void instructions() [Not necessary]_
+  - _void play()_
 
 - apply all the functions in int main().
 
 ## Applications of the Functions 📃
 
-1. void gotoxy(int x, int y)
+1. **void gotoxy(int x, int y)**
 
 ```
 void gotoxy(int x, int y)
