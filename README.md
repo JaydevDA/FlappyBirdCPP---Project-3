@@ -344,7 +344,7 @@ gotoxy(SCREEN_WIDTH + 3, 4); cout<<"Pipe Pos: "<<pipePos[0];
 
 11. **gameover()**
 
-```
+```cpp
 void gameover(){
 	system("cls");
 	cout<<endl;
@@ -364,16 +364,35 @@ void gameover(){
 
 12. **updateScore()**
 
-```
-
+```cpp
+void updateScore(){
+	gotoxy(WIN_WIDTH + 7, 5);cout<<"Score: "<<score<<endl;
+}
 ```
 
 - Purpose:
   - Updates and displays the player’s score on the right side of the screen.
 
-  
-  
 
+**13. instructions()**
+
+```cpp
+void instructions(){
+	
+	system("cls");
+	cout<<"Instructions";
+	cout<<"\n----------------";
+	cout<<"\n Press spacebar to make bird fly";
+	cout<<"\n\nPress any key to go back to menu";
+	getch();
+}
+```
+
+- Purpose:
+  - Displays game controls and waits for a key press.
+  
+  
+14
 
 
 
