@@ -1,15 +1,15 @@
 # Flappy Bird Console Game - Technical Documentation
 
 ## Table of Contents
-1. [Game Overview](##Game-Overview)
-2. [Code Structure](##*Code-Structure*👷🏻)
-3. [applications of the functions](#application_of_the_functions)
-4. [Game Logic](#game-logic)
-5. [Controls](#controls)
-6. [Limitations](#limitations)
-7. [Potential Improvements](#potential-improvements)
+1. Game Overview
+2. Code Structure
+3. applications of the functions
+4. Game Logic
+5. Controls
+6. Limitations
+7. Potential Improvements
 
-##*Game-Overview*
+## *Game-Overview* 🎮
 
 This is a console-based clone of the classic mobile game Flappy Bird, built using C++ and Windows console functions. It simulates the original game’s basic mechanics: a bird flying through gaps between pipes, with increasing difficulty and score tracking. As time passes, the bird will keep falling down, so you have to press 'Space' to make the bird go up
 
@@ -39,7 +39,7 @@ This is a console-based clone of the classic mobile game Flappy Bird, built usin
  
 - When you press any key, the program will initiate and a bird will be drawn besides the left border of size(6x2) and 6 cells below the ceiling.
 
-## *Code Structure* 
+## *Code Structure* 👷🏻
 
 - Include libraries ( also non- standard libraries like dos.h, windows.h and conio.h ).
 - Define or declare Global Variables.
