@@ -111,8 +111,8 @@ void gotoxy(int x, int y)
 
 - How It Works:
   - Uses COORD CursorPosition and SetConsoleCursorPosition() to set the cursor position.
-
-- Allows precise placement of text (like the bird or pipes) on the screen.
+  
+Allows precise placement of text (like the bird or pipes) on the screen.  
 
 2. **setcursor(bool visible, DWORD size)**
 
@@ -133,9 +133,9 @@ void setcursor(bool visible, DWORD size)
   - Controls the visibility and size of the blinking console cursor.
 
 - Why It’s Used:
-  - The game hides the cursor (visible = false) to prevent it from flickering or interfering with the game visuals.
-
-- If size = 0, it defaults to 20 (but since the cursor is hidden, this doesn’t affect gameplay).  
+  - The game hides the cursor (visible = false) to prevent it from flickering or interfering with the game visuals.  
+  
+If size = 0, it defaults to 20 (but since the cursor is hidden, this doesn’t affect gameplay).  
 
 3. **drawBorder()**
 
@@ -210,6 +210,51 @@ void drawPipe(int ind){
   - A bottom pipe from gapPos[ind] + GAP_SIZE to the bottom of the screen.  
   
 The gap in between is where the bird must fly.
+
+6. **erasePipe(int ind)**
+
+```cpp
+void erasePipe(int ind){
+	if( pipeFlag[ind] == true ){
+		for(int i=0; i<gapPos[ind]; i++){ 
+			gotoxy(WIN_WIDTH-pipePos[ind],i+1); cout<<"   "; 
+		}
+		for(int i=gapPos[ind]+GAP_SIZE; i<SCREEN_HEIGHT-1; i++){ 
+			gotoxy(WIN_WIDTH-pipePos[ind],i+1); cout<<"   "; 
+		}
+	}
+}
+```
+
+- Purpose:
+  - Clears a pipe from the screen by replacing it with spaces.
+
+- Why It’s Needed:
+  - Before moving a pipe, the old position must be erased to prevent visual artifacts.
+ 
+7. **drawBird()**
+
+```cpp
+void drawBird(){
+	for(int i=0; i<2; i++){
+		for(int j=0; j<6; j++){
+			gotoxy(j+3,i+birdPos); cout<<bird[i][j];
+		}
+	}
+}
+```
+
+- Purpose:
+  - Renders the bird using ASCII art at its current position (birdPos).
+
+The bird: 
+
+
+![Bird image](https://github.com/user-attachments/assets/1a41bfc7-d01b-4faa-9dcc-2abd6858bfd5)
+
+
+
+
 
 
 
