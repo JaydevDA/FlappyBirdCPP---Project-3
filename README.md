@@ -116,7 +116,7 @@ void gotoxy(int x, int y)
 
 2. **setcursor(bool visible, DWORD size)**
 
-```
+```cpp
 void setcursor(bool visible, DWORD size) 
 {
 	if(size == 0)
