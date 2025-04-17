@@ -392,10 +392,87 @@ void instructions(){
   - Displays game controls and waits for a key press.
   
 
-14. **play()**
+**14. play()**
 
-```
-
+```cpp
+void play(){
+	
+	birdPos = 6;
+	score = 0;
+	pipeFlag[0] = 1; 
+	pipeFlag[1] = 0;
+	pipePos[0] = pipePos[1] = 4;
+	
+	system("cls"); 
+	drawBorder();
+	genPipe(0);
+	updateScore();
+	
+	gotoxy(WIN_WIDTH + 5, 2);cout<<"FLAPPY BIRD";
+	gotoxy(WIN_WIDTH + 6, 4);cout<<"----------";
+	gotoxy(WIN_WIDTH + 6, 6);cout<<"----------";
+	gotoxy(WIN_WIDTH + 7, 12);cout<<"Control ";
+	gotoxy(WIN_WIDTH + 7, 13);cout<<"-------- ";
+	gotoxy(WIN_WIDTH + 2, 14);cout<<" Spacebar = jump";
+	
+	gotoxy(10, 5);cout<<"Press any key to start";
+	getch();
+	gotoxy(10, 5);cout<<"                      ";
+	
+	while(1){
+		 
+		if(kbhit()){
+			char ch = getch();
+			if(ch==32){
+				if( birdPos > 3 )
+					birdPos-=3;
+			} 
+			if(ch==27){
+				break;
+			}
+		}
+		
+		drawBird();
+		drawPipe(0);
+		drawPipe(1);
+		debug();
+		if( collision() == 1 ){
+			gameover();
+			return;
+		}
+		Sleep(100);
+		eraseBird();
+		erasePipe(0);
+		erasePipe(1);
+		birdPos += 1;
+		
+		if( birdPos > SCREEN_HEIGHT - 2 ){
+			gameover();
+			return;
+		}
+		
+		if( pipeFlag[0] == 1 )
+			pipePos[0] += 2;
+		
+		if( pipeFlag[1] == 1 )
+			pipePos[1] += 2;
+		
+		if( pipePos[0] >= 40 && pipePos[0] < 42 ){
+			pipeFlag[1] = 1;
+			pipePos[1] = 4;
+			genPipe(1);
+		}
+		if( pipePos[0] > 68 ){
+			score++;
+			updateScore();
+			pipeFlag[1] = 0;
+			pipePos[0] = pipePos[1];
+			gapPos[0] = gapPos[1];
+		}
+		
+	}
+	 
+}
 ```
 
 - Purpose:
