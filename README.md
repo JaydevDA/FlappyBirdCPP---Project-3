@@ -199,7 +199,7 @@ void drawPipe(int ind){
 		for(int i=0; i<gapPos[ind]; i++){ 
 			gotoxy(WIN_WIDTH-pipePos[ind],i+1); cout<<"***"; 
 		}
-		for(int i=gapPos[ind]+GAP_SIZE; i<SCREEN_HEIGHT; i++){ 
+		for(int i=gapPos[ind]+GAP_SIZE; i<SCREEN_HEIGHT-1; i++){ 
 			gotoxy(WIN_WIDTH-pipePos[ind],i+1); cout<<"***"; 
 		}
 	} 
@@ -257,7 +257,7 @@ void erasePipe(int ind){
 void drawBird(){
 	for(int i=0; i<2; i++){
 		for(int j=0; j<6; j++){
-			gotoxy(j+3,i+birdPos); cout<<bird[i][j];
+			gotoxy(j+2,i+birdPos); cout<<bird[i][j];
 		}
 	}
 }
@@ -280,7 +280,7 @@ The bird:
 void eraseBird(){
 	for(int i=0; i<2; i++){
 		for(int j=0; j<6; j++){
-			gotoxy(j+3,i+birdPos); cout<<" ";
+			gotoxy(j+2,i+birdPos); cout<<" ";
 		}
 	}
 }
