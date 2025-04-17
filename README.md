@@ -9,7 +9,7 @@
 6. [Limitations](#limitations)
 7. [Potential Improvements](#potential-improvements)
 
-## *Game Overview*
+##*Game-Overview*
 
 This is a console-based clone of the classic mobile game Flappy Bird, built using C++ and Windows console functions. It simulates the original game’s basic mechanics: a bird flying through gaps between pipes, with increasing difficulty and score tracking. As time passes, the bird will keep falling down, so you have to press 'Space' to make the bird go up
 
