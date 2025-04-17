@@ -43,7 +43,7 @@ This is a console-based clone of the classic mobile game Flappy Bird, built usin
 
 - Include libraries ( also non- standard libraries like dos.h, windows.h and conio.h ).
 
-'''
+```
 #include<iostream>
 #include<conio.h>
 #include<dos.h>
@@ -51,11 +51,11 @@ This is a console-based clone of the classic mobile game Flappy Bird, built usin
 #include<string.h>
 #include <windows.h>
 #include <time.h>
-'''
+```
 
 - Define or declare Global Variables.
 
-'''
+```
 #define SCREEN_WIDTH 90
 #define SCREEN_HEIGHT 26
 #define WIN_WIDTH 70
@@ -64,7 +64,6 @@ This is a console-based clone of the classic mobile game Flappy Bird, built usin
 #define PIPE_DIF 45
 
 using namespace std;
-//	cout<<"���������";
  
 HANDLE console = GetStdHandle(STD_OUTPUT_HANDLE);
 COORD CursorPosition;
@@ -76,9 +75,22 @@ char bird[2][6] = { '/','-','-','o','\\',' ',
 					'|','_','_','_',' ','>' };
 int birdPos = 6;
 int score = 0;
-'''
+```
 
 - Create functions.
+  - void gotoxy(int x, int y)
+  - void setcursor(bool visible, DWORD size)
+  - void drawBorder()
+  - void genPipe(int ind)
+  - void erasePipe(int ind)
+  - void drawBird()
+  - void eraseBird()
+  - int collision()
+  - void debug() [Not necesssary]
+  - void updateScore()
+  - void instructions() [Not necessary]
+  - void play()
+
 - apply all the functions in int main().
 
 
