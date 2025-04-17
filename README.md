@@ -1,4 +1,4 @@
-
+# Flappy Bird Console Game - Technical Documentation
 
 ## Table of Contents
 1. Game Overview
