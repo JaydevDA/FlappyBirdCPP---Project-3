@@ -199,7 +199,7 @@ void drawPipe(int ind){
 		for(int i=0; i<gapPos[ind]; i++){ 
 			gotoxy(WIN_WIDTH-pipePos[ind],i+1); cout<<"***"; 
 		}
-		for(int i=gapPos[ind]+GAP_SIZE; i<SCREEN_HEIGHT-1; i++){ 
+		for(int i=gapPos[ind]+GAP_SIZE; i<SCREEN_HEIGHT; i++){ 
 			gotoxy(WIN_WIDTH-pipePos[ind],i+1); cout<<"***"; 
 		}
 	} 
