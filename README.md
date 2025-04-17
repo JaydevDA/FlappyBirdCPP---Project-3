@@ -1,8 +1,8 @@
 # Flappy Bird Console Game - Technical Documentation
 
 ## Table of Contents
-1. [Game Overview](#game-overview)
-2. [Code Structure](#code-structure)
+1. [Game Overview](##*Game-Overview*🎮)
+2. [Code Structure](##*Code-Structure*👷🏻)
 3. [applications of the functions](#application_of_the_functions)
 4. [Game Logic](#game-logic)
 5. [Controls](#controls)
