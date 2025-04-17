@@ -96,7 +96,7 @@ int score = 0;
 ## Applications of the Functions 📃
 
 
-1. **void gotoxy(int x, int y)**
+**1. void gotoxy(int x, int y)**
 
 ```cpp
 void gotoxy(int x, int y)
@@ -117,7 +117,7 @@ Allows precise placement of text (like the bird or pipes) on the screen.
 
 
 
-2. **setcursor(bool visible, DWORD size)**
+**2. setcursor(bool visible, DWORD size)**
 
 ```cpp
 void setcursor(bool visible, DWORD size) 
@@ -142,7 +142,7 @@ If size = 0, it defaults to 20 (but since the cursor is hidden, this doesn’t a
 
 
 
-3. **drawBorder()**
+**3. drawBorder()**
 
 ```cpp
 void drawBorder(){ 
@@ -172,7 +172,7 @@ void drawBorder(){
 
 
 
-4. **genPipe(int ind)**
+**4. genPipe(int ind)**
 
 ```cpp
 void genPipe(int ind){
@@ -194,7 +194,7 @@ This prevents impossible gaps (too high or too low).
 
 
  
-5. **drawPipe(int ind)**
+**5. drawPipe(int ind)**
 
 ```cpp
 void drawPipe(int ind){
@@ -230,7 +230,7 @@ display:
 
 
 
-6. **erasePipe(int ind)**
+**6. erasePipe(int ind)**
 
 ```cpp
 void erasePipe(int ind){
@@ -254,7 +254,7 @@ void erasePipe(int ind){
   
   
  
-7. **drawBird()**
+**7. drawBird()**
 
 ```cpp
 void drawBird(){
@@ -277,7 +277,7 @@ The bird:
 
 
     
-8. **eraseBird()**
+**8. eraseBird()**
 
 ```cpp
 void eraseBird(){
@@ -298,7 +298,7 @@ void eraseBird(){
 
 
  
-9. **collision()**
+**9. collision()**
 
 ```cpp
 int collision(){
@@ -328,7 +328,7 @@ Returns 1 if collision detected, 0 otherwise.
 
 
     
-10. **debug()**
+**10. debug()**
 
 ```cpp
 void debug(){
@@ -342,7 +342,7 @@ gotoxy(SCREEN_WIDTH + 3, 4); cout<<"Pipe Pos: "<<pipePos[0];
 
     
 
-11. **gameover()**
+**11. gameover()**
 
 ```cpp
 void gameover(){
@@ -362,7 +362,7 @@ void gameover(){
 
      
 
-12. **updateScore()**
+**12. updateScore()**
 
 ```cpp
 void updateScore(){
@@ -391,8 +391,50 @@ void instructions(){
 - Purpose:
   - Displays game controls and waits for a key press.
   
-  
-14
+
+14. **play()**
+
+```
+
+```
+
+- Purpose:
+  - The main game loop where all mechanics are executed.
+
+- Key Steps:
+  - Initialization:
+
+    - Sets bird position (birdPos = 6).
+
+    - Resets score (score = 0).
+
+    - Generates the first pipe (genPipe(0)).
+
+  - Game Loop:
+
+    - Input Handling:
+
+      - Spacebar makes the bird jump (birdPos -= 3).
+
+      - ESC exits the game.
+
+    - Physics:
+
+      - Bird falls (birdPos++).
+
+      - Pipes move left (pipePos[0] += 2).
+
+    - Collision Check:
+
+      - If collision detected, calls gameover().
+
+    - Scoring:
+
+      - Increases score when passing a pipe.
+
+  - Rendering:
+
+    - Draws/erases pipes and bird in a loop.
 
 
 
