@@ -114,5 +114,84 @@ void gotoxy(int x, int y)
 
 - Allows precise placement of text (like the bird or pipes) on the screen.
 
+2. **setcursor(bool visible, DWORD size)**
+
+```
+void setcursor(bool visible, DWORD size) 
+{
+	if(size == 0)
+		size = 20;	
+	
+	CONSOLE_CURSOR_INFO lpCursor;	
+	lpCursor.bVisible = visible;
+	lpCursor.dwSize = size;
+	SetConsoleCursorInfo(console,&lpCursor);
+}
+```
+
+- Purpose:
+  - Controls the visibility and size of the blinking console cursor.
+
+- Why It’s Used:
+  - The game hides the cursor (visible = false) to prevent it from flickering or interfering with the game visuals.
+
+- If size = 0, it defaults to 20 (but since the cursor is hidden, this doesn’t affect gameplay).  
+
+3. **drawBorder()**
+
+```
+void drawBorder(){ 
+	
+	for(int i=0; i<SCREEN_WIDTH; i++){
+		gotoxy(i,0); cout<<"�";
+		gotoxy(i,SCREEN_HEIGHT); cout<<"�";
+	}
+	
+	for(int i=0; i<SCREEN_HEIGHT; i++){
+		gotoxy(0,i); cout<<"�";
+		gotoxy(SCREEN_WIDTH,i); cout<<"�";
+	}
+	for(int i=0; i<SCREEN_HEIGHT; i++){
+		gotoxy(WIN_WIDTH,i); cout<<"�";
+	}
+}
+```
+
+- Purpose:
+  - Draws a border around the game area to define the playable space.
+
+- How It Works:
+  - Uses gotoxy() and cout to draw lines around the edges.
+
+- A vertical line at WIN_WIDTH (70) separates the game area from the score display.
+
+4. **genPipe(int ind)**
+
+```
+void genPipe(int ind){
+	gapPos[ind] = 3 + rand()%14; 
+}
+```
+
+- Purpose:
+  - Randomly generates the vertical position of a pipe’s gap.
+
+- How It Works:
+  - gapPos[ind] = 3 + rand() % 14; ensures the gap is between rows 3 and 16.
+
+This prevents impossible gaps (too high or too low).
+
+- Example:
+  - If rand() % 14 returns 7, then gapPos[0] = 10, meaning the gap starts at row 10.
+ 
+
+
+
+
+
+
+
+
+
 
 
