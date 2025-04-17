@@ -95,7 +95,7 @@ int score = 0;
 
 ## Applications of the Functions 📃
 
-- void gotoxy(int x, int y)
+1. void gotoxy(int x, int y)
 
 ```
 void gotoxy(int x, int y)
@@ -106,13 +106,13 @@ void gotoxy(int x, int y)
 }
 ```
 
-  - Purpose:
-     - Moves the console cursor to a specified (x, y) coordinate.
+- Purpose:
+  - Moves the console cursor to a specified (x, y) coordinate.
 
-  - How It Works:
-    - Uses COORD CursorPosition and SetConsoleCursorPosition() to set the cursor position.
+- How It Works:
+  - Uses COORD CursorPosition and SetConsoleCursorPosition() to set the cursor position.
 
-  - Allows precise placement of text (like the bird or pipes) on the screen.
+- Allows precise placement of text (like the bird or pipes) on the screen.
 
 
 
