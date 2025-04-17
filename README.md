@@ -548,3 +548,9 @@ int main()
 ```
 
 
+Clip of a person playing this game: 
+
+![flappy bird recording](https://github.com/user-attachments/assets/5f3fe9bf-7cb9-42bc-8000-ffb3da046855)
+
+
+
