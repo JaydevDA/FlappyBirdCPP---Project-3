@@ -97,7 +97,7 @@ int score = 0;
 
 1. **void gotoxy(int x, int y)**
 
-```
+```cpp
 void gotoxy(int x, int y)
 {
 	CursorPosition.X = x;
@@ -139,7 +139,7 @@ void setcursor(bool visible, DWORD size)
 
 3. **drawBorder()**
 
-```
+```cpp
 void drawBorder(){ 
 	
 	for(int i=0; i<SCREEN_WIDTH; i++){
@@ -167,7 +167,7 @@ void drawBorder(){
 
 4. **genPipe(int ind)**
 
-```
+```cpp
 void genPipe(int ind){
 	gapPos[ind] = 3 + rand()%14; 
 }
@@ -184,7 +184,32 @@ This prevents impossible gaps (too high or too low).
 - Example:
   - If rand() % 14 returns 7, then gapPos[0] = 10, meaning the gap starts at row 10.
  
+5. **drawPipe(int ind)**
 
+```cpp
+void drawPipe(int ind){
+	if( pipeFlag[ind] == true ){
+		for(int i=0; i<gapPos[ind]; i++){ 
+			gotoxy(WIN_WIDTH-pipePos[ind],i+1); cout<<"***"; 
+		}
+		for(int i=gapPos[ind]+GAP_SIZE; i<SCREEN_HEIGHT-1; i++){ 
+			gotoxy(WIN_WIDTH-pipePos[ind],i+1); cout<<"***"; 
+		}
+	} 
+}
+```
+
+- Purpose:
+  - Draws a pipe (made of ***) at the specified index.
+
+- How It Works:
+  - If pipeFlag[ind] is true (active), it draws:
+
+  - A top pipe from row 1 to gapPos[ind].
+
+  - A bottom pipe from gapPos[ind] + GAP_SIZE to the bottom of the screen.  
+  
+The gap in between is where the bird must fly.
 
 
 
