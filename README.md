@@ -95,6 +95,7 @@ int score = 0;
 
 ## Applications of the Functions 📃
 
+
 1. **void gotoxy(int x, int y)**
 
 ```cpp
@@ -113,6 +114,8 @@ void gotoxy(int x, int y)
   - Uses COORD CursorPosition and SetConsoleCursorPosition() to set the cursor position.
   
 Allows precise placement of text (like the bird or pipes) on the screen.  
+
+
 
 2. **setcursor(bool visible, DWORD size)**
 
@@ -136,6 +139,8 @@ void setcursor(bool visible, DWORD size)
   - The game hides the cursor (visible = false) to prevent it from flickering or interfering with the game visuals.  
   
 If size = 0, it defaults to 20 (but since the cursor is hidden, this doesn’t affect gameplay).  
+
+
 
 3. **drawBorder()**
 
@@ -165,6 +170,8 @@ void drawBorder(){
 
 - A vertical line at WIN_WIDTH (70) separates the game area from the score display.
 
+
+
 4. **genPipe(int ind)**
 
 ```cpp
@@ -183,6 +190,9 @@ This prevents impossible gaps (too high or too low).
 
 - Example:
   - If rand() % 14 returns 7, then gapPos[0] = 10, meaning the gap starts at row 10.
+ 
+
+
  
 5. **drawPipe(int ind)**
 
@@ -214,7 +224,9 @@ The gap in between is where the bird must fly.
 display: 
 
 
-![image](https://github.com/user-attachments/assets/73fb1c43-4f90-4a4a-beb3-25736ffed18b)
+![image](https://github.com/user-attachments/assets/73fb1c43-4f90-4a4a-beb3-25736ffed18b)  
+
+  
 
 
 
@@ -239,6 +251,9 @@ void erasePipe(int ind){
 - Why It’s Needed:
   - Before moving a pipe, the old position must be erased to prevent visual artifacts.
  
+  
+  
+ 
 7. **drawBird()**
 
 ```cpp
@@ -261,6 +276,7 @@ The bird:
 
 
 
+    
 8. **eraseBird()**
 
 ```cpp
@@ -278,7 +294,9 @@ void eraseBird(){
 
 - How It Works:
   - Loops through the bird’s character positions and replaces them with spaces.
- 
+
+
+
  
 9. **collision()**
 
@@ -308,6 +326,8 @@ int collision(){
 Returns 1 if collision detected, 0 otherwise.
 
 
+
+    
 10. **debug()**
 
 ```cpp
@@ -319,6 +339,8 @@ gotoxy(SCREEN_WIDTH + 3, 4); cout<<"Pipe Pos: "<<pipePos[0];
 - Purpose:
   - Meant for debugging game variables (e.g., pipe positions).
 
+
+    
 
 11. **gameover()**
 
@@ -338,6 +360,8 @@ void gameover(){
   - Displays a "Game Over" screen and waits for a key press.
 
 
+     
+
 12. **updateScore()**
 
 ```
@@ -347,8 +371,8 @@ void gameover(){
 - Purpose:
   - Updates and displays the player’s score on the right side of the screen.
 
-
-
+  
+  
 
 
 
