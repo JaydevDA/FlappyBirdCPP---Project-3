@@ -4,10 +4,7 @@
 1. Game Overview
 2. Code Structure
 3. applications of the functions
-4. Game Logic
-5. Controls
-6. Limitations
-7. Potential Improvements
+
 
 ## *Game-Overview* 🎮
 
