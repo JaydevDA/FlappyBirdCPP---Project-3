@@ -3,7 +3,7 @@
 ## Table of Contents
 1. [Game Overview](#game-overview)
 2. [Code Structure](#code-structure)
-3. [Key Functions](#key-functions)
+3. [applications of the functions](#application_of_the_functions)
 4. [Game Logic](#game-logic)
 5. [Controls](#controls)
 6. [Limitations](#limitations)
@@ -23,7 +23,9 @@ This is a console-based clone of the classic mobile game Flappy Bird, built usin
 ### Display💻
 
 - When the program initiates, it displays the title of the game along with 3 options, in which you have to choose one --> start, instructions or quit.  
-  - hi
+  - start --> Will initiate the game
+  - instructions --> Will show the instructions to how to play/exit the game.
+  - quit --> end the game.
   
   
  ![title screen image](https://github.com/user-attachments/assets/4423b243-dc7e-4769-8e19-69331a6bd941)
@@ -37,5 +39,12 @@ This is a console-based clone of the classic mobile game Flappy Bird, built usin
  
 - When you press any key, the program will initiate and a bird will be drawn besides the left border of size(6x2) and 6 cells below the ceiling.
 
+## *Code Structure* 👷🏻
 
-  
+- Include libraries ( also non- standard libraries like dos.h, windows.h and conio.h ).
+- Define or declare Global Variables.
+- Create functions.
+- apply all the functions in int main().
+
+
+
