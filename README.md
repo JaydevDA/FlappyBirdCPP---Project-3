@@ -211,6 +211,13 @@ void drawPipe(int ind){
   
 The gap in between is where the bird must fly.
 
+display: 
+
+
+![image](https://github.com/user-attachments/assets/73fb1c43-4f90-4a4a-beb3-25736ffed18b)
+
+
+
 6. **erasePipe(int ind)**
 
 ```cpp
@@ -254,8 +261,91 @@ The bird:
 
 
 
+8. **eraseBird()**
+
+```cpp
+void eraseBird(){
+	for(int i=0; i<2; i++){
+		for(int j=0; j<6; j++){
+			gotoxy(j+3,i+birdPos); cout<<" ";
+		}
+	}
+}
+```
+
+- Purpose:
+  - Clears the bird’s previous position before moving it.
+
+- How It Works:
+  - Loops through the bird’s character positions and replaces them with spaces.
+ 
+ 
+9. **collision()**
+
+```cpp
+int collision(){
+	if( pipePos[0] >= 61 ){
+		if( birdPos<gapPos[0]|| birdPos >gapPos[0]+GAP_SIZE ){
+			//cout<< " HIT ";
+			//getch();
+			return 1;
+		}
+	}
+	return 0;
+}
+```
+
+- Purpose:
+  - Checks if the bird has hit a pipe or the ground.
+
+- How It Works:
+  - When pipePos[0] >= 61 (pipe is near the bird), it checks:
+
+  - If birdPos is above the gap (< gapPos[0]) → collision.
+
+  - If birdPos is below the gap (> gapPos[0] + GAP_SIZE) → collision.
+
+Returns 1 if collision detected, 0 otherwise.
 
 
+10. **debug()**
+
+```cpp
+void debug(){
+gotoxy(SCREEN_WIDTH + 3, 4); cout<<"Pipe Pos: "<<pipePos[0];
+}
+```
+
+- Purpose:
+  - Meant for debugging game variables (e.g., pipe positions).
+
+
+11. **gameover()**
+
+```
+void gameover(){
+	system("cls");
+	cout<<endl;
+	cout<<"\t\t--------------------------"<<endl;
+	cout<<"\t\t-------- Game Over -------"<<endl;
+	cout<<"\t\t--------------------------"<<endl<<endl;
+	cout<<"\t\tPress any key to go back to menu.";
+	getch();
+}
+```
+
+- Purpose:
+  - Displays a "Game Over" screen and waits for a key press.
+
+
+12. **updateScore()**
+
+```
+
+```
+
+- Purpose:
+  - Updates and displays the player’s score on the right side of the screen.
 
 
 
